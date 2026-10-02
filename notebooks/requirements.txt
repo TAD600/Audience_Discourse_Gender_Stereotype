@@ -1,0 +1,16 @@
+googletrans==4.0.0rc1
+ipykernel
+pandas
+numpy
+tqdm
+avro-python3
+requests
+beautifulsoup4
+langdetect
+wordfreq
+textblob
+nltk
+spacy
+google-api-python-client
+google-auth-oauthlib
+google-auth-httplib2

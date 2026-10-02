@@ -1,0 +1,10 @@
+# Virtual environment folder
+notebooks/venv/
+
+# Python cache folders
+**/__pycache__/
+*.pyc
+
+# Jupyter Notebook checkpoints
+**/.ipynb_checkpoints/
+
