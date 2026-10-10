@@ -24,21 +24,6 @@ flowchart LR
 
 ```
 
-```mermaid
-flowchart LR
-    A[notebooks/01_data_collection.ipynb] -->|constructs raw data| B[(data)]
-    B -->|A subset of\n the data\n goes for\n handcoding| C[notebooks/02_coding_art&gender.ipynb]
-    C -->|Gender coded complete raw data|B
-    B --> D[(notebooks/03_data_preparation.ipynb)]
-    D -->|Prepares data for text analysis and saves the data| B
-    B --> E[notebooks/04_sentiment_analysis.ipynb]
-    E -->|Fitted plots| F((plots))
-    E -->|Keyness, wordclouds, and corpus characteristics| F[(notebooks/03_exploratory.rmd)]
-    F --> |Other plots|E
-    F --> G[(notebooks/04_stm.rmd)]
-    G --> |STM plots|E
-
-```
 ## Softwares and packages
 Data collection and pre-processing were done using python 3.9 and the libraries langdetect,spellchecker, wordfreq, avro, googletrans, nltk, matplotlib, spacy, datetime and seasborn. Data analysis was done using the packages ‘quanteda’, ‘quanteda. textstats’, ‘quanteda. dictionaries’, ‘quanteda. textplots’, ‘stm’, ‘tidyverse’, ‘pyLDAvis’ and ‘zoo’ (Benoit et al. 2018) (Roberts et al., 2019) in the statistical software RStudio version 2022.07.02 (Team, 2021) .  
 
