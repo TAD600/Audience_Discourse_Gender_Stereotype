@@ -8,18 +8,18 @@ The following mermaid plot illustrates the data journey,
 
 ```mermaid
 flowchart LR
-    A[notebooks/01_data_collection.ipynb] -->|constructs raw data| B[(data)]
+    A[notebooks/\n01_data_collection.ipynb] -->|constructs raw data| B[(data)]
     B -->|Data goes for handcoding| C[[Gemini\n + Handcoding]]
     C -->|Gender coded complete raw data|B
-    B -->|Prepares data for text analysis| D[(notebooks/03_data_preparation.ipynb)]
+    B -->|Prepares data\n for\n text analysis| D[(notebooks/03_data_preparation.ipynb)]
     D -->|Saves the data|B
-    B --> E[notebooks/04_sentiment_analysis.ipynb]
+    B --> E[notebooks/\n04_sentiment_analysis.ipynb]
     E -->|outputs| F((plots))
-    B --> G[notebooks/05_exploratory analysis.Rmd]
+    B --> G[notebooks/\n05_exploratory analysis.Rmd]
     G -->|outputs| F((plots))
-    B --> H[(notebooks/06_keyness.Rmd)]
+    B --> H[(notebooks/\n06_keyness.Rmd)]
     H --> |outputs| F((plots))
-    B --> G[(notebooks/07_topic modeling.Rmd)]
+    B --> G[(notebooks/\n07_topic modeling.Rmd)]
     G --> |outputs| F((plots))
 
 ```
