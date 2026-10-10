@@ -14,13 +14,13 @@ flowchart LR
     B -->|Prepares data for text analysis| D[(notebooks/03_data_preparation.ipynb)]
     D -->|Saves the data|B
     B --> E[notebooks/04_sentiment_analysis.ipynb]
-    E -->|Fitted plots| F((plot))
+    E -->|Fitted plots| F((plots))
     B --> G[notebooks/05_exploratory analysis.Rmd]
-    G -->|Fitted plots| F((plot))
+    G -->|Fitted plots| F((plots))
     B --> H[(notebooks/06_keyness.Rmd)]
-    H --> |Fitted plots| F((plot))
+    H --> |Fitted plots| F((plots))
     B --> G[(notebooks/07_topic modeling.Rmd)]
-    G --> |Fitted plots| F((plot))
+    G --> |Fitted plots| F((plots))
 
 ```
 
