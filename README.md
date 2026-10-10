@@ -9,11 +9,31 @@ The following mermaid plot illustrates the data journey,
 ```mermaid
 flowchart LR
     A[notebooks/01_data_collection.ipynb] -->|constructs raw data| B[(data)]
-    B -->|Data goes for handcoding| C[[Handcoding]]
-    C -->|Gender coded complete raw data| D[(notebooks/02_data_prep_sentiment.ipynb)]
+    B -->|Data goes for handcoding| C[[Gemini\n + Handcoding]]
+    C -->|Gender coded complete raw data|B
+    B -->|Prepares data for text analysis| D[(notebooks/03_data_preparation.ipynb)]
+    D -->|Saves the data|B
+    B --> E[notebooks/04_sentiment_analysis.ipynb]
+    E -->|Fitted plots| F((plot))
+    B --> G[notebooks/05_exploratory analysis.Rmd]
+    G -->|Fitted plots| F((plot))
+    B --> H[(notebooks/06_keyness.Rmd)]
+    H --> |Fitted plots| F((plot))
+    B --> G[(notebooks/07_topic modeling.Rmd)]
+    G --> |Fitted plots| F((plot))
+
+```
+
+```mermaid
+flowchart LR
+    A[notebooks/01_data_collection.ipynb] -->|constructs raw data| B[(data)]
+    B -->|A subset of\n the data\n goes for\n handcoding| C[notebooks/02_coding_art&gender.ipynb]
+    C -->|Gender coded complete raw data|B
+    B --> D[(notebooks/03_data_preparation.ipynb)]
     D -->|Prepares data for text analysis and saves the data| B
-    D -->|Fitted plots| E((plot))
-    D -->|Keyness, wordclouds, and corpus characteristics| F[(notebooks/03_exploratory.rmd)]
+    B --> E[notebooks/04_sentiment_analysis.ipynb]
+    E -->|Fitted plots| F((plots))
+    E -->|Keyness, wordclouds, and corpus characteristics| F[(notebooks/03_exploratory.rmd)]
     F --> |Other plots|E
     F --> G[(notebooks/04_stm.rmd)]
     G --> |STM plots|E
