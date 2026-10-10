@@ -7,7 +7,7 @@ This repository contains codes to reproduce the results of the research paper "G
 The following mermaid plot illustrates the data journey,
 
 ```mermaid
-flowchart TD
+flowchart LR
     A[notebooks/01_data_collection.ipynb] -->|constructs raw data| B[(data)]
     B -->|Data goes for handcoding| C[[Handcoding]]
     C -->|Gender coded complete raw data| D[(notebooks/02_data_prep_sentiment.ipynb)]
@@ -28,4 +28,4 @@ Data collection required 7 days, followed by gender and art coding. The Gemini A
 As a result, reproduction time will vary significantly based on individual researcher workflows, though the core analysis took approximately one month to complete.
 
 _**Note:** Due to YouTube's data retention policies, the raw corpus collected in October 2026 cannot be stored or publicly shared. Executing this repository at a different point in time will retrieve a new data snapshot, which will inherently alter the research findings.
-However, the processed analytical data remains storable for up to 32 months. Within this timeframe, the processed dataset can be supplied upon request to facilitate the exact reproduction of the findings presented in this paper. contact: <ins>dhiraanan3@gmail.com</ins>_
+However, the processed analytical data remains storable for up to 32 months. Within this timeframe, the processed dataset can be supplied upon request to facilitate the exact reproduction of the findings presented in this paper. contact: dhiraanan3@gmail.com_
